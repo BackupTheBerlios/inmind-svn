@@ -4,7 +4,6 @@ use strict;
 use warnings;
 use Net::DNS;
 use Net::DNS::Nameserver;
-use threads;
 use Thread;
 
 our %mhash;
