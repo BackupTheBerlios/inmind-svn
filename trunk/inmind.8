@@ -1,39 +1,28 @@
-.\" A sample man page. 
-.\" Contact admin@yourcompany.com to correct errors or omissions. 
-.TH man 1 "07 December 2003" "1.0" "Sample man page"
+.TH man 1 "2 April 2007" "0.1" "InMind man page"
 .SH NAME
-sample \- a sample man page
+InMind \- InMind man mage
 .SH SYNOPSIS
-.\" Syntax goes here. 
-.B man sample
+.B Inmind , high performance dns cacher/forwader
 .SH EXAMPLES
-man pages will often contain examples following the 
-.B SYNOPSIS
+inmind -v -i 127.0.0.1 -p 55 -i 1.1.1.1 -n 4.4.4.4 -n 2.2.2.2 -n 3.3.3.3 
+.nf
+this server will listen on 127.0.0.1 and use all -n arguments as nameserver.
 .SH DESCRIPTION
-.B sample
-is a sample man page. 
+.B InMind is high performance dns cacher , its aimed to get used on Mail/Cacher server , home gateway machines and etc . note that entries on inmind never get expired .
 .SH OPTIONS
-The sample man page is not a program, and does not take any options.
-.SH FILES
-.P 
-.I /usr/share/man/man1/sample.1.gz
-.SH SEE ALSO
-.BR man (1), 
-.BR man (7),
-.BR apropos (1),
-.BR less (1),
-.BR groff (1), 
-.BR catman (8)
+-i specify local address to bind to.
+.nf
+-n add Nameserver to list of nameservers , /etc/resolv.conf will get used by default.e
+.nf
+-p Listeting udp port.
+.nf
+-v to be little more verbose.
+.nf
+--help to see this message.
+.nf
 .SH BUGS
-No known bugs at this time. 
-.SH LIST
-.IP \(bu 2 
-List item
-.IP \(bu 2 
-List item 2
+its kind of slow on more than 500 requset per second .
 .SH AUTHOR
 .nf
-Joe "Zonker" Brockmeier (jzb@dissociatedpress.net)
+Armin ranjbar <zoup@zoup.org>
 .fi
-.SH HISTORY
-2003 \- Written as an example template for other man pages.
